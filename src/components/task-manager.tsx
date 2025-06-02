@@ -20,23 +20,15 @@ export default function TaskManager() {
       const storedTasks = localStorage.getItem('tasks');
       if (storedTasks) {
         setTasks(JSON.parse(storedTasks));
-      } else {
-        // Default tasks if nothing in localStorage - only on first load if desired
-        // setTasks([
-        //   { id: '1', text: 'Follow up with project stakeholders', completed: false },
-        //   { id: '2', text: 'Design the new homepage layout', completed: true },
-        //   { id: '3', text: 'Review PR #123', completed: false },
-        // ]);
       }
     } catch (error) {
       console.error("Failed to parse tasks from localStorage", error);
-      // Optionally clear corrupted storage or set to default
       localStorage.removeItem('tasks');
     }
   }, []);
 
   useEffect(() => {
-    if (isMounted) { // Only save to localStorage after initial mount and hydration
+    if (isMounted) { 
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
   }, [tasks, isMounted]);
@@ -116,9 +108,8 @@ export default function TaskManager() {
   const progressPercentage = useMemo(() => totalTasksCount > 0 ? (completedTasksCount / totalTasksCount) * 100 : 0, [completedTasksCount, totalTasksCount]);
 
   if (!isMounted) {
-     // Render nothing or a loading skeleton until mounted to avoid hydration mismatch with localStorage
     return (
-        <Card className="w-full max-w-2xl shadow-2xl bg-card animate-pulse">
+        <Card className="w-full max-w-2xl shadow-lg bg-card animate-pulse">
             <CardHeader className="text-center">
                 <CardTitle className="text-4xl font-headline tracking-tight h-10 bg-muted-foreground/20 rounded"></CardTitle>
                 <CardDescription className="text-muted-foreground mt-2 h-6 bg-muted-foreground/20 rounded"></CardDescription>
@@ -128,7 +119,10 @@ export default function TaskManager() {
                     <div className="h-10 flex-grow bg-muted-foreground/20 rounded"></div>
                     <div className="h-10 w-28 bg-muted-foreground/20 rounded"></div>
                 </div>
-                <div className="my-6 h-2 bg-muted-foreground/20 rounded w-full"></div>
+                <div className="my-6">
+                    <div className="flex justify-between items-center mb-2 h-4 bg-muted-foreground/20 rounded w-1/3"></div>
+                    <div className="h-2 bg-muted-foreground/20 rounded w-full"></div>
+                 </div>
                  <div className="space-y-3">
                     <div className="h-12 bg-muted-foreground/10 rounded-lg"></div>
                     <div className="h-12 bg-muted-foreground/10 rounded-lg"></div>
@@ -140,23 +134,23 @@ export default function TaskManager() {
   }
 
   return (
-    <Card className="w-full max-w-2xl shadow-2xl bg-card">
+    <Card className="w-full max-w-2xl shadow-lg bg-card">
       <CardHeader className="text-center">
-        <CardTitle className="text-4xl font-headline tracking-tight">TaskFlow</CardTitle>
-        <CardDescription className="text-muted-foreground mt-2">
+        <CardTitle className="text-3xl sm:text-4xl font-semibold tracking-tight">TaskFlow</CardTitle>
+        <CardDescription className="text-muted-foreground mt-2 text-sm sm:text-base">
           Your personal task management hub. Stay organized, stay focused.
         </CardDescription>
       </CardHeader>
-      <CardContent className="p-6">
+      <CardContent className="p-4 sm:p-6">
         <AddTaskForm onAddTask={handleAddTask} />
         
         {totalTasksCount > 0 && (
-          <div className="my-6">
-            <div className="flex justify-between items-center mb-2 text-sm text-muted-foreground">
+          <div className="my-4 sm:my-6">
+            <div className="flex justify-between items-center mb-2 text-xs sm:text-sm text-muted-foreground">
               <span className="font-medium">Progress</span>
               <span>{completedTasksCount} / {totalTasksCount} completed</span>
             </div>
-            <Progress value={progressPercentage} className="h-2 [&>div]:bg-accent" aria-label={`Task progress: ${completedTasksCount} of ${totalTasksCount} completed`} />
+            <Progress value={progressPercentage} className="h-2 [&>div]:bg-primary" aria-label={`Task progress: ${completedTasksCount} of ${totalTasksCount} completed`} />
           </div>
         )}
 
@@ -171,7 +165,7 @@ export default function TaskManager() {
           onUpdateEditingText={handleUpdateEditingText}
         />
         {tasks.length === 0 && (
-           <p className="text-center text-muted-foreground mt-8 py-4 border-2 border-dashed border-muted-foreground/20 rounded-lg">
+           <p className="text-center text-muted-foreground mt-8 py-4 border-2 border-dashed border-border/50 rounded-lg text-sm sm:text-base">
              No tasks yet. Add one above to get started!
            </p>
         )}
