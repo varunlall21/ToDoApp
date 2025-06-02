@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { FilePenLine, Trash2, CheckCircle, XCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+
 interface TaskItemProps {
   task: Task;
   isEditing: boolean;

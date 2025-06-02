@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: 'Manage your tasks efficiently with TaskFlow.',
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{

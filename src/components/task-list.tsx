@@ -14,6 +14,7 @@ interface TaskListProps {
   onUpdateEditingText: (newText: string) => void;
 }
 
+
 export default function TaskList({
   tasks,
   editingTask,

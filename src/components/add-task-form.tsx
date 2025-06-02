@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { PlusCircle } from 'lucide-react';
 
+
 interface AddTaskFormProps {
   onAddTask: (text: string) => void;
 }
