@@ -8,99 +8,99 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* White */
-    --foreground: 222.2 84% 4.9%; /* Default ShadCN dark text */
+    --background: 210 20% 98%; /* Very Light Blue-Gray */
+    --foreground: 220 15% 25%; /* Dark Cool Gray */
 
     --card: 0 0% 100%; /* White */
-    --card-foreground: 222.2 84% 4.9%; /* Default ShadCN dark text */
+    --card-foreground: 220 15% 25%; /* Dark Cool Gray */
 
     --popover: 0 0% 100%; /* White */
-    --popover-foreground: 222.2 84% 4.9%; /* Default ShadCN dark text */
+    --popover-foreground: 220 15% 25%; /* Dark Cool Gray */
 
-    --primary: 221.2 83.2% 53.3%; /* ShadCN Primary Blue */
-    --primary-foreground: 210 40% 98%; /* Light text for primary */
+    --primary: 340 82% 60%; /* Vibrant Pink/Red */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 210 40% 96.1%; /* Light gray */
-    --secondary-foreground: 222.2 47.4% 11.2%; /* Darker gray text */
+    --secondary: 190 70% 92%; /* Light Cyan/Aqua */
+    --secondary-foreground: 190 60% 30%; /* Dark Cyan/Aqua */
 
-    --muted: 210 40% 96.1%; /* Light gray */
-    --muted-foreground: 215.4 16.3% 46.9%; /* Medium gray text */
+    --muted: 220 10% 94%; /* Light Gray */
+    --muted-foreground: 220 10% 45%; /* Medium Gray */
 
-    --accent: 210 40% 94.1%; /* Slightly darker light gray for accents */
-    --accent-foreground: 222.2 47.4% 11.2%; /* Darker gray text */
+    --accent: 50 95% 60%; /* Bright Yellow/Orange */
+    --accent-foreground: 220 15% 15%; /* Very Dark Cool Gray */
 
-    --destructive: 0 84.2% 60.2%; /* Red */
-    --destructive-foreground: 210 40% 98%; /* Light text for destructive */
+    --destructive: 0 70% 55%; /* Softer Red */
+    --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 214.3 31.8% 91.4%; /* Light border */
-    --input: 214.3 31.8% 91.4%; /* Light input background */
-    --ring: 221.2 83.2% 53.3%; /* Primary blue for rings */
+    --border: 210 15% 88%; /* Light Blue-Gray Border */
+    --input: 210 15% 96%; /* Very Light Blue-Gray Input */
+    --ring: 340 82% 65%; /* Slightly Lighter Vibrant Pink/Red for ring */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem; /* Slightly larger radius for a softer, modern feel */
 
     /* Chart colors (light theme) */
-    --chart-1: 221.2 83.2% 63.3%; /* Lighter primary blue */
-    --chart-2: 190 70% 60%;   /* Bright Cyan/Teal */
-    --chart-3: 210 40% 80.1%; /* Lighter secondary gray */
-    --chart-4: 221.2 83.2% 43.3%; /* Darker primary blue */
-    --chart-5: 190 70% 40%;   /* Darker Cyan/Teal */
+    --chart-1: 340 75% 65%;   /* Pink/Red variant */
+    --chart-2: 190 65% 70%;   /* Cyan/Aqua variant */
+    --chart-3: 50 85% 65%;    /* Yellow/Orange variant */
+    --chart-4: 220 60% 60%;   /* Cool Blue variant */
+    --chart-5: 270 70% 65%;   /* Purple variant */
 
     /* Sidebar colors (light theme) */
-    --sidebar-background: 210 40% 97%;  /* Very light gray */
-    --sidebar-foreground: 222.2 84% 4.9%; /* Main dark text */
-    --sidebar-primary: 221.2 83.2% 53.3%;    /* Primary blue */
-    --sidebar-primary-foreground: 210 40% 98%; /* Light text on primary */
-    --sidebar-accent: 210 40% 90.1%;     /* Lighter accent gray */
-    --sidebar-accent-foreground: 222.2 47.4% 11.2%; /* Darker gray text on accent */
-    --sidebar-border: 214.3 31.8% 85.4%;     /* Light border for sidebar */
-    --sidebar-ring: 221.2 83.2% 53.3%;       /* Primary blue for rings */
+    --sidebar-background: 200 30% 97%;  /* Very light cool blue */
+    --sidebar-foreground: 220 15% 25%; /* Main dark text */
+    --sidebar-primary: 340 82% 60%;    /* Primary Pink/Red */
+    --sidebar-primary-foreground: 0 0% 100%; /* Light text on primary */
+    --sidebar-accent: 190 70% 92%;     /* Light Cyan/Aqua for accent */
+    --sidebar-accent-foreground: 190 60% 30%; /* Dark Cyan/Aqua on accent */
+    --sidebar-border: 200 20% 90%;     /* Light cool blue border */
+    --sidebar-ring: 340 82% 65%;       /* Primary Pink/Red for rings */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%; /* Default ShadCN dark bg */
-    --foreground: 210 40% 98%; /* Default ShadCN light text */
+    --background: 220 15% 15%; /* Very Dark Cool Gray */
+    --foreground: 210 20% 95%; /* Very Light Blue-Gray */
 
-    --card: 222.2 84% 4.9%; /* Default ShadCN dark bg */
-    --card-foreground: 210 40% 98%; /* Default ShadCN light text */
+    --card: 220 15% 20%; /* Dark Cool Gray */
+    --card-foreground: 210 20% 95%; /* Very Light Blue-Gray */
 
-    --popover: 222.2 84% 4.9%; /* Default ShadCN dark bg */
-    --popover-foreground: 210 40% 98%; /* Default ShadCN light text */
+    --popover: 220 15% 18%; /* Darker Cool Gray for Popover */
+    --popover-foreground: 210 20% 95%; /* Very Light Blue-Gray */
 
-    --primary: 217.2 91.2% 59.8%; /* ShadCN Primary Blue (Darker variant) */
-    --primary-foreground: 210 40% 98%; /* Light text for primary */
+    --primary: 340 82% 65%; /* Vibrant Pink/Red (slightly lighter for dark mode) */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 217.2 32.6% 17.5%; /* Dark gray */
-    --secondary-foreground: 210 40% 98%; /* Light text */
+    --secondary: 190 60% 25%; /* Dark Cyan/Aqua */
+    --secondary-foreground: 190 70% 90%; /* Light Cyan/Aqua */
 
-    --muted: 217.2 32.6% 17.5%; /* Dark gray */
-    --muted-foreground: 215 20.2% 65.1%; /* Lighter gray text */
+    --muted: 220 10% 25%; /* Dark Gray */
+    --muted-foreground: 220 10% 65%; /* Lighter Gray */
 
-    --accent: 217.2 32.6% 22.5%; /* Slightly lighter dark gray for accents */
-    --accent-foreground: 210 40% 98%; /* Light text */
+    --accent: 50 90% 65%; /* Bright Yellow/Orange (slightly lighter for dark mode) */
+    --accent-foreground: 220 15% 10%; /* Almost Black */
 
-    --destructive: 0 62.8% 30.6%; /* Darker Red */
-    --destructive-foreground: 210 40% 98%; /* Light text for destructive */
+    --destructive: 0 65% 60%; /* Softer Red (slightly lighter for dark mode) */
+    --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 217.2 32.6% 17.5%; /* Dark border */
-    --input: 217.2 32.6% 17.5%; /* Dark input background */
-    --ring: 217.2 91.2% 59.8%; /* Primary blue for rings (darker variant) */
+    --border: 220 15% 30%; /* Medium-Dark Cool Gray Border */
+    --input: 220 15% 22%; /* Dark Cool Gray Input */
+    --ring: 340 82% 70%; /* Lighter Vibrant Pink/Red for ring */
 
     /* Chart colors (dark theme) */
-    --chart-1: 217.2 91.2% 69.8%; /* Lighter primary blue (dark) */
-    --chart-2: 190 65% 70%;   /* Brighter Cyan/Teal (dark) */
-    --chart-3: 217.2 32.6% 27.5%; /* Lighter secondary gray (dark) */
-    --chart-4: 217.2 91.2% 49.8%; /* Darker primary blue (dark) */
-    --chart-5: 190 65% 50%;   /* Darker Cyan/Teal (dark) */
+    --chart-1: 340 75% 70%;   /* Pink/Red variant */
+    --chart-2: 190 65% 75%;   /* Cyan/Aqua variant */
+    --chart-3: 50 85% 70%;    /* Yellow/Orange variant */
+    --chart-4: 220 60% 65%;   /* Cool Blue variant */
+    --chart-5: 270 70% 70%;   /* Purple variant */
 
-    /* Sidebar colors (dark theme) */
-    --sidebar-background: 222.2 80% 8.9%;  /* Darker bg for sidebar */
-    --sidebar-foreground: 210 40% 98%; /* Main light text */
-    --sidebar-primary: 217.2 91.2% 59.8%;    /* Primary blue (dark) */
-    --sidebar-primary-foreground: 210 40% 98%; /* Light text on primary */
-    --sidebar-accent: 217.2 32.6% 27.5%;     /* Lighter dark accent gray */
-    --sidebar-accent-foreground: 210 40% 98%; /* Light text on accent */
-    --sidebar-border: 217.2 32.6% 22.5%;     /* Dark border for sidebar */
-    --sidebar-ring: 217.2 91.2% 59.8%;       /* Primary blue for rings (dark) */
+     /* Sidebar colors (dark theme) */
+    --sidebar-background: 220 15% 12%;  /* Very Dark Cool Gray for sidebar */
+    --sidebar-foreground: 210 20% 95%; /* Main light text */
+    --sidebar-primary: 340 82% 65%;    /* Primary Pink/Red */
+    --sidebar-primary-foreground: 0 0% 100%; /* Light text on primary */
+    --sidebar-accent: 190 60% 25%;     /* Dark Cyan/Aqua for accent */
+    --sidebar-accent-foreground: 190 70% 90%; /* Light Cyan/Aqua on accent */
+    --sidebar-border: 220 15% 25%;     /* Dark cool gray border */
+    --sidebar-ring: 340 82% 70%;       /* Primary Pink/Red for rings */
   }
 }
 
